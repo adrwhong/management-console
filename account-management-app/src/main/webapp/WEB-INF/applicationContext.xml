@@ -21,6 +21,9 @@
     <constructor-arg value="${notification.pass:}"/>
     <constructor-arg value="${notification.from-address}"/>
     <constructor-arg value="${notification.admin-address}"/>
+    <constructor-arg value="${notification.type}"/>
+    <constructor-arg value="${notification.host}"/>
+    <constructor-arg value="${notification.port}"/>
     <constructor-arg value="${db.host}"/>
     <constructor-arg value="${db.port}"/>
     <constructor-arg value="${db.name}"/>

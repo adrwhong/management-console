@@ -24,6 +24,9 @@ public class McConfig {
     private String notificationPass;
     private String notificationFromAddress;
     private String notificationAdminAddress;
+    private String notificationType;
+    private String notificationHost;
+    private String notificationPort;
 
     private String dbHost;
     private String dbPort;
@@ -39,6 +42,9 @@ public class McConfig {
                     String notificationPass,
                     String notificationFromAddress,
                     String notificationAdminAddress,
+                    String notificationType,
+                    String notificationHost,
+                    String notificationPort,
                     String dbHost,
                     String dbPort,
                     String dbName,
@@ -52,6 +58,9 @@ public class McConfig {
         this.notificationPass = notificationPass;
         this.notificationFromAddress = notificationFromAddress;
         this.notificationAdminAddress = notificationAdminAddress;
+        this.notificationType = notificationType;
+        this.notificationHost = notificationHost;
+        this.notificationPort = notificationPort;
         this.dbHost = dbHost;
         this.dbPort = dbPort;
         this.dbName = dbName;
@@ -89,6 +98,18 @@ public class McConfig {
 
     public String getNotificationAdminAddress() {
         return notificationAdminAddress;
+    }
+
+    public String getNotificationType() {
+        return notificationType;
+    }
+
+    public String getNotificationHost() {
+        return notificationHost;
+    }
+
+    public String getNotificationPort() {
+        return notificationPort;
     }
 
     public String getDbHost() {

@@ -34,9 +34,20 @@ public class NotificationMgrImpl implements NotificationMgr {
             new NotificationMgrConfig(mcConfig.getNotificationFromAddress(),
                                       mcConfig.getNotificationUser(),
                                       mcConfig.getNotificationPass(),
-                                      mcConfig.getNotificationAdminAddress());
-        factory.initialize(mcConfig.getNotificationUser(),
-                           mcConfig.getNotificationPass());
+                                      mcConfig.getNotificationAdminAddress(),
+                                      mcConfig.getNotificationType(),
+                                      mcConfig.getNotificationHost(),
+                                      mcConfig.getNotificationPort());
+
+        if (mcConfig.getNotificationType().equals("smtp")) {
+          factory.initialize(mcConfig.getNotificationUser(),
+                           mcConfig.getNotificationPass(),
+                           mcConfig.getNotificationHost(),
+                           mcConfig.getNotificationPort());  
+        } else {
+          factory.initialize(mcConfig.getNotificationUser(),
+                            mcConfig.getNotificationPass());
+        {}
     }
 
     @Override
